@@ -16,7 +16,7 @@ pipeline
 							steps	
 							{
 							
-								withSonarQubeEnv(credentialsId: 'sonar') 
+								withSonarQubeEnv(withSonarQubeEnv(credentialsId: 'newsonar') 
 								{
 									withMaven(jdk: 'localjdk-1.8', maven: 'localmaven') 
 									{
